@@ -3,14 +3,14 @@ import axios from 'axios';
 
 
 export default function UserList()  {
-    const [user, setUser] = useState([]);
+    const [user, setUser] = useState({});
    const photo = user.avatar_url;
 
    useEffect(() => {
-    axios.get('https://api.github.com/users/OlhaGr?client_id=a1a5a13b1e7446f4e730&client_secret=5b4cf0f151ef1ff324ea903ae0146d35d61e26d7&sort=created')
-      .then((res) => { 
-        setUser(res.data);
-      })
+    axios
+    .get('https://api.github.com/users/OlhaGr?  6d7&   sort=created')
+      .then((res) => 
+        setUser(res.data))
       .catch ((err) =>
         console.log(err));
     }, []);
